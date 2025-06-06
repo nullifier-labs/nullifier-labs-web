@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, Twitter, Mail, Zap, Brain, Code, Network, Users } from "lucide-react"
+import { Github, Mail, Zap, Brain, Code, Network, Users } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -23,10 +23,10 @@ export default function HomePage() {
                   GitHub
                 </Button>
               </Link>
-              <Link href="https://twitter.com/nullifierlabs" target="_blank" rel="noopener noreferrer">
+              <Link href="https://x.com/nullifierlabs" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
-                  <Twitter className="h-4 w-4 mr-2" />
-                  X (Twitter)
+                  <Image src="/x-social-media-black-icon.svg" alt="X " width={20} height={20} className="h-4 w-4 mr-2 filter invert opacity-70" />
+                  X
                 </Button>
               </Link>
               <Link href="mailto:nullifier-labs@proton.me" passHref legacyBehavior>
@@ -229,10 +229,14 @@ export default function HomePage() {
                 View Our Projects
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
-              <Mail className="h-5 w-5 mr-2" />
-              Get In Touch
-            </Button>
+            <Link href="mailto:nullifier-labs@proton.me" passHref legacyBehavior>
+              <a>
+                <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
+                  <Mail className="h-5 w-5 mr-2" />
+                  Get In Touch
+                </Button>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -249,10 +253,10 @@ export default function HomePage() {
               <Link href="https://github.com/nullifier-labs" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="https://twitter.com/nullifierlabs" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
+              <Link href="https://x.com/nullifierlabs" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                <Image src="/x-social-media-black-icon.svg" alt="X" width={20} height={20} className="h-5 w-5 filter invert opacity-50" />
               </Link>
-              <Link href="#" className="text-slate-400 hover:text-white transition-colors">
+              <Link href="mailto:nullifier-labs@proton.me" className="text-slate-400 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
