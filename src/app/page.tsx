@@ -17,34 +17,41 @@ export default function HomePage() {
               <span className="text-2xl font-bold text-white">Nullifier Labs</span>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="https://github.com/nullifier-labs" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://github.com/nullifier-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
                 <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
                   <Github className="h-4 w-4 mr-2" />
                   GitHub
                 </Button>
               </Link>
-              <Link href="https://x.com/nullifierlabs" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="https://x.com/nullifierlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className=""
+              >
                 <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
                   <Image src="/x-social-media-black-icon.svg" alt="X " width={20} height={20} className="h-4 w-4 mr-2 filter invert opacity-70" />
                   X
                 </Button>
               </Link>
-              <Link href="mailto:nullifier-labs@proton.me" passHref legacyBehavior>
-                <a>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-purple-500 text-slate-900 hover:bg-purple-500 hover:text-white"
-                  >
-                    Contact
-                  </Button>
-                </a>
+              <Link href="mailto:nullifier-labs@proton.me">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border-purple-500 text-slate-900 hover:bg-purple-500 hover:text-white"
+                >
+                  Contact
+                </Button>
               </Link>
             </div>
           </div>
         </div>
       </nav>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -69,19 +76,16 @@ export default function HomePage() {
                 <Zap className="h-5 w-5 mr-2" />
                 Explore Experiments
               </Button>
-              <Link href="mailto:nullifier-labs@proton.me" passHref legacyBehavior>
-                <a>
-                  <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
-                    <Mail className="h-5 w-5 mr-2" />
-                    Join Our Community
-                  </Button>
-                </a>
+              <Link href="mailto:nullifier-labs@proton.me">
+                <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
+                  <Mail className="h-5 w-5 mr-2" />
+                  Join Our Community
+                </Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
-
       {/* Experiments Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -167,7 +171,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Philosophy Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
         <div className="max-w-7xl mx-auto">
@@ -213,7 +216,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -223,24 +225,26 @@ export default function HomePage() {
             researcher, developer, or just curious about privacy tech, there&apos;s a place for you here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://github.com/nullifier-labs" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://github.com/nullifier-labs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
                 <Github className="h-5 w-5 mr-2" />
                 View Our Projects
               </Button>
             </Link>
-            <Link href="mailto:nullifier-labs@proton.me" passHref legacyBehavior>
-              <a>
-                <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
-                  <Mail className="h-5 w-5 mr-2" />
-                  Get In Touch
-                </Button>
-              </a>
+            <Link href="mailto:nullifier-labs@proton.me">
+              <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                Get In Touch
+              </Button>
             </Link>
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="border-t border-slate-800 bg-slate-900/50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -250,13 +254,26 @@ export default function HomePage() {
               <span className="text-xl font-bold text-white">Nullifier Labs</span>
             </div>
             <div className="flex items-center space-x-6">
-              <Link href="https://github.com/nullifier-labs" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <Link
+                href="https://github.com/nullifier-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="https://x.com/nullifierlabs" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+              <Link
+                href="https://x.com/nullifierlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 <Image src="/x-social-media-black-icon.svg" alt="X" width={20} height={20} className="h-5 w-5 filter invert opacity-50" />
               </Link>
-              <Link href="mailto:nullifier-labs@proton.me" className="text-slate-400 hover:text-white transition-colors">
+              <Link
+                href="mailto:nullifier-labs@proton.me"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
@@ -267,5 +284,5 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
