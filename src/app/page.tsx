@@ -60,8 +60,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              We're a zero-knowledge research lab pushing the boundaries of cryptographic privacy. From playful
-              experiments to serious infrastructure, we build in public and explore what's possible when privacy meets
+              We&apos;re a zero-knowledge research lab pushing the boundaries of cryptographic privacy. From playful
+              experiments to serious infrastructure, we build in public and explore what&apos;s possible when privacy meets
               innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -88,7 +88,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Our Experiments</h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From toys to tools, we're exploring every corner of the zero-knowledge universe
+              From toys to tools, we&apos;re exploring every corner of the zero-knowledge universe
             </p>
           </div>
 
@@ -219,8 +219,8 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-4">Ready to Explore?</h2>
           <p className="text-xl text-slate-300 mb-8">
-            Join us in pushing the boundaries of what's possible with zero-knowledge proofs. Whether you're a
-            researcher, developer, or just curious about privacy tech, there's a place for you here.
+            Join us in pushing the boundaries of what&apos;s possible with zero-knowledge proofs. Whether you&apos;re a
+            researcher, developer, or just curious about privacy tech, there&apos;s a place for you here.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="https://github.com/nullifier-labs" target="_blank" rel="noopener noreferrer">
