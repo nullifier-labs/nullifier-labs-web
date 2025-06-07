@@ -25,7 +25,7 @@ export default function HomePage() {
               >
                 <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
                   <Github className="h-4 w-4 mr-2" />
-                  GitHub
+                  <span className="hidden sm:inline">GitHub</span>
                 </Button>
               </Link>
               <Link
@@ -36,7 +36,7 @@ export default function HomePage() {
               >
                 <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
                   <Image src="/x-social-media-black-icon.svg" alt="X " width={20} height={20} className="h-4 w-4 mr-2 filter invert opacity-70" />
-                  X
+                  <span className="hidden sm:inline">X</span>
                 </Button>
               </Link>
               <Link href="mailto:nullifier-labs@proton.me">
