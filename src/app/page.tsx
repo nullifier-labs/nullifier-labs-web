@@ -3,55 +3,13 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import { Badge } from "@/components/ui/badge"
 import { Github, Mail, Zap, Brain, Code, Network, Users } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import { NavBar } from "@/components/layout/NavBar"
+import { Footer } from "@/components/layout/Footer"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Navigation */}
-      <nav className="border-b border-slate-800 bg-slate-900/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center space-x-2">
-              <Image src="/nullifier-labs-logo-small.svg" alt="Nullifier Labs Logo" width={64} height={64} className="h-16 w-16 filter invert" />
-              <span className="text-2xl font-bold text-white">Nullifier Labs</span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="https://github.com/nullifier-labs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
-              >
-                <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
-                  <Github className="h-4 w-4 mr-2" />
-                  <span className="hidden sm:inline">GitHub</span>
-                </Button>
-              </Link>
-              <Link
-                href="https://x.com/nullifierlabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=""
-              >
-                <Button variant="ghost" size="sm" className="text-slate-300 hover:text-white hover:bg-slate-800">
-                  <Image src="/x-social-media-black-icon.svg" alt="X " width={20} height={20} className="h-4 w-4 mr-2 filter invert opacity-70" />
-                  <span className="hidden sm:inline">X</span>
-                </Button>
-              </Link>
-              <Link href="mailto:nullifier-labs@proton.me">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-purple-500 text-slate-900 hover:bg-purple-500 hover:text-white"
-                >
-                  Contact
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <NavBar />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -72,10 +30,12 @@ export default function HomePage() {
               innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
-                <Zap className="h-5 w-5 mr-2" />
-                Explore Experiments
-              </Button>
+              <Link href="/experiments">
+                <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
+                  <Zap className="h-5 w-5 mr-2" />
+                  Explore Experiments
+                </Button>
+              </Link>
               <Link href="mailto:nullifier-labs@proton.me">
                 <Button size="lg" variant="outline" className="border-slate-600 text-slate-900 hover:bg-slate-800 hover:text-white">
                   <Mail className="h-5 w-5 mr-2" />
@@ -97,77 +57,89 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Code className="h-6 w-6 text-purple-400" />
-                  <CardTitle className="text-white">ZK Toys</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  Mini zk-apps including games, puzzles, and voting tools that make zero-knowledge fun and accessible
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/zk-toys">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Code className="h-6 w-6 text-purple-400" />
+                    <CardTitle className="text-white">ZK Toys</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    Mini zk-apps including games, puzzles, and voting tools that make zero-knowledge fun and accessible
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Brain className="h-6 w-6 text-pink-400" />
-                  <CardTitle className="text-white">Proof of Mystery</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  ZK-based ARGs and time-locked puzzles that blend cryptography with storytelling
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/proof-of-mystery">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Brain className="h-6 w-6 text-pink-400" />
+                    <CardTitle className="text-white">Proof of Mystery</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    ZK-based ARGs and time-locked puzzles that blend cryptography with storytelling
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Users className="h-6 w-6 text-blue-400" />
-                  <CardTitle className="text-white">zkSocial</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  Private social graph and reputation system prototypes for the next generation of social networks
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/zk-social">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Users className="h-6 w-6 text-blue-400" />
+                    <CardTitle className="text-white">zkSocial</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    Private social graph and reputation system prototypes for the next generation of social networks
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Zap className="h-6 w-6 text-yellow-400" />
-                  <CardTitle className="text-white">Zero Knowledge IDE</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  Developer tooling for building and verifying zk circuits with an intuitive interface
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/zk-ide">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Zap className="h-6 w-6 text-yellow-400" />
+                    <CardTitle className="text-white">Zero Knowledge IDE</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    Developer tooling for building and verifying zk circuits with an intuitive interface
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Network className="h-6 w-6 text-green-400" />
-                  <CardTitle className="text-white">zkInfra</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  Infrastructure experiments including zk light clients, rollups, and bridges
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/zk-infra">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Network className="h-6 w-6 text-green-400" />
+                    <CardTitle className="text-white">zkInfra</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    Infrastructure experiments including zk light clients, rollups, and bridges
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors">
-              <CardHeader>
-                <div className="flex items-center space-x-2">
-                  <Brain className="h-6 w-6 text-orange-400" />
-                  <CardTitle className="text-white">zkML & AI</CardTitle>
-                </div>
-                <CardDescription className="text-slate-300">
-                  Private inference, verification of LLM claims, and the intersection of ZK with AI
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link href="/experiments/zk-ml">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-500 transition-colors cursor-pointer">
+                <CardHeader>
+                  <div className="flex items-center space-x-2">
+                    <Brain className="h-6 w-6 text-orange-400" />
+                    <CardTitle className="text-white">zkML & AI</CardTitle>
+                  </div>
+                  <CardDescription className="text-slate-300">
+                    Private inference, verification of LLM claims, and the intersection of ZK with AI
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
@@ -246,43 +218,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="border-t border-slate-800 bg-slate-900/50 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Image src="/nullifier-labs-logo-small.svg" alt="Nullifier Labs Logo" width={48} height={48} className="h-12 w-12 filter invert" />
-              <span className="text-xl font-bold text-white">Nullifier Labs</span>
-            </div>
-            <div className="flex items-center space-x-6">
-              <Link
-                href="https://github.com/nullifier-labs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://x.com/nullifierlabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-white transition-colors"
-              >
-                <Image src="/x-social-media-black-icon.svg" alt="X" width={20} height={20} className="h-5 w-5 filter invert opacity-50" />
-              </Link>
-              <Link
-                href="mailto:nullifier-labs@proton.me"
-                className="text-slate-400 hover:text-white transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-slate-800 text-center text-slate-400">
-            <p>&copy; 2025 Nullifier Labs. Building the future of privacy, one proof at a time.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
