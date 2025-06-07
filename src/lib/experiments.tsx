@@ -1,11 +1,11 @@
-import { Brain, Code, Network, Users, Zap } from "lucide-react";
-import React from "react";
+import React from 'react';
+import { Brain, Code2, Cpu, Network, Shield, Terminal } from 'lucide-react';
 
 export interface Experiment {
   slug: string;
   title: string;
   description: string;
-  longDescription: JSX.Element;
+  longDescription: React.ReactNode;
   icon: React.ElementType;
   color: string;
 }
@@ -22,7 +22,7 @@ export const experiments: Experiment[] = [
         Explore simple games, puzzles, and voting applications to get a hands-on understanding of how ZK proofs work.
       </p>
     ),
-    icon: Code,
+    icon: Code2,
     color: 'text-purple-400',
   },
   {
@@ -50,7 +50,7 @@ export const experiments: Experiment[] = [
         like private posts, anonymous-but-verified credentials, and spam resistance without compromising user data.
       </p>
     ),
-    icon: Users,
+    icon: Shield,
     color: 'text-blue-400',
   },
   {
@@ -64,7 +64,7 @@ export const experiments: Experiment[] = [
         and testing circuits, making it easier for developers to integrate privacy-preserving features into their applications.
       </p>
     ),
-    icon: Zap,
+    icon: Terminal,
     color: 'text-yellow-400',
   },
   {
@@ -92,7 +92,7 @@ export const experiments: Experiment[] = [
         verifiable computation for model outputs, and ways to prove claims made by Large Language Models (LLMs).
       </p>
     ),
-    icon: Brain,
+    icon: Cpu,
     color: 'text-orange-400',
   },
 ];
