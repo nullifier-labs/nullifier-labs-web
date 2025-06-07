@@ -49,7 +49,7 @@ export default function ExperimentPage({ params }: Props) {
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
             <Link href="/experiments">
-              <Button variant="ghost" className="text-slate-300 hover:text-white">
+              <Button variant="ghost" className="text-slate-300 hover:bg-slate-800 hover:text-white">
                 <ArrowLeft className="h-4 w-4 mr-2" />
                 Back to Experiments
               </Button>
