@@ -1,48 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nullifier Labs Website
 
-## Getting Started
+The official website for Nullifier Labs - a zero-knowledge research lab exploring the boundaries of cryptographic privacy.
 
-First, run the development server:
+## About
+
+We're building the future of privacy through zero-knowledge experiments, from playful toys to serious infrastructure. Our focus areas include:
+
+- **ZK Toys**: Educational games and interactive tools
+- **Proof of Mystery**: Cryptographic storytelling and ARGs  
+- **zkSocial**: Private social networks and reputation systems
+- **Zero Knowledge IDE**: Developer tooling for ZK circuits
+- **zkInfra**: Light clients, rollups, and bridges
+- **zkML & AI**: Private inference and verifiable AI claims
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS v4 with custom animations
+- **UI Components**: Radix UI primitives with shadcn/ui
+- **Icons**: Lucide React
+- **TypeScript**: Fully typed with strict configuration
+
+## Development
+
+This project uses pnpm as the package manager.
+
+### Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
+
+# Build for production
+pnpm build
+
+# Run production server
+pnpm start
+
+# Lint code
+pnpm lint
+
+# Run tests
+pnpm test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Running Tests
-
-Run the unit tests with:
-
-```bash
-npm test
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── experiments/        # Experiment listing and detail pages
+│   ├── layout.tsx         # Root layout with metadata
+│   └── page.tsx           # Homepage
+├── components/
+│   ├── layout/            # NavBar, Footer
+│   └── ui/               # Reusable UI components (shadcn/ui)
+└── lib/
+    ├── experiments.tsx    # Experiment data and types
+    └── utils.ts          # Utility functions
 ```
 
-## Learn More
+## Philosophy
 
-To learn more about Next.js, take a look at the following resources:
+- **Open Source First**: Build in public, attract community, share knowledge freely
+- **Storytelling via ZK**: Puzzles, time capsules, and secret messages that engage and educate
+- **Grants & Hackathons**: Build fun ZK projects to secure funding for bigger ideas
+- **AI Crossover**: Exploring zkML, private inference, and verification of AI systems
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+We welcome contributions! Please feel free to submit issues and pull requests.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT License - see [LICENSE](LICENSE) for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
 
-## Continuous Integration
-
-This project uses a GitHub Actions workflow that installs dependencies and runs `npm test --silent --run` on pushes and pull requests.
+- Email: nullifier-labs@proton.me
+- GitHub: [@nullifier-labs](https://github.com/nullifier-labs)
