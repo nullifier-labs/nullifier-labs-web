@@ -16,4 +16,6 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm install
+      - run: pnpm run lint
+      - run: pnpm run build
       - run: npm test --silent --run
