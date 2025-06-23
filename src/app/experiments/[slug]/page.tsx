@@ -9,11 +9,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   const experiment = getExperiment(slug);
 
   if (!experiment) {
@@ -35,7 +35,7 @@ export async function generateStaticParams() {
 }
 
 export default async function ExperimentPage({ params }: Props) {
-  const { slug } = await params;
+  const { slug } = params;
   const experiment = getExperiment(slug);
 
   if (!experiment) {
