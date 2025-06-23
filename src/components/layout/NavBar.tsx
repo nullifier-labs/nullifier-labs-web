@@ -47,7 +47,7 @@ export function NavBar() {
               >
                 <Image
                   src="/x-social-media-black-icon.svg"
-                  alt="X "
+                  alt="X"
                   width={20}
                   height={20}
                   className="h-4 w-4 mr-2 filter invert opacity-70"
