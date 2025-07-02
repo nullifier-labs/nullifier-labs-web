@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Code2, Cpu, Network, Shield, Terminal, CloudSun } from 'lucide-react';
+import { Brain, Code2, Cpu, Network, Shield, Terminal, CloudSun, Cog } from 'lucide-react';
 
 export interface Experiment {
   slug: string;
@@ -50,6 +50,52 @@ export const experiments: Experiment[] = [
     ),
     icon: CloudSun,
     color: 'text-cyan-400',
+  },
+  {
+    slug: 'zkvm-from-scratch',
+    title: 'zkVM from Scratch',
+    description: 'Build a zero-knowledge virtual machine from the ground up, understanding every component.',
+    longDescription: (
+      <div>
+        <p className="mb-4">
+          zkVM from Scratch is an educational journey into building a zero-knowledge virtual machine from first principles. 
+          This experiment guides you through creating a minimal but functional zkVM, demystifying the core concepts behind 
+          verifiable computation and zero-knowledge execution environments.
+        </p>
+        <p className="mb-4">
+          Starting with basic arithmetic circuits and building up to a complete instruction set, you'll learn how zkVMs 
+          enable private and verifiable computation. We cover constraint systems, witness generation, proving systems, 
+          and the architecture decisions that make zkVMs practical for real-world applications.
+        </p>
+        <p>
+          <strong>What you'll learn:</strong>
+        </p>
+        <ul className="list-disc pl-6 mt-2">
+          <li>Fundamentals of arithmetic circuits and constraint systems</li>
+          <li>Designing a minimal instruction set for zkVM</li>
+          <li>Witness generation and program execution</li>
+          <li>Integration with proving systems (Groth16, PLONK, STARK)</li>
+          <li>Optimization techniques for practical performance</li>
+          <li>Building developer-friendly tooling around your zkVM</li>
+        </ul>
+        <p className="mt-4">
+          Perfect for developers who want to understand zkVMs at a deep level and researchers exploring new architectures 
+          for verifiable computation.
+        </p>
+        <p className="mt-4">
+          <a 
+            href="https://github.com/nullifier-labs/zkvm-from-scratch" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline"
+          >
+            View the project on GitHub →
+          </a>
+        </p>
+      </div>
+    ),
+    icon: Cog,
+    color: 'text-indigo-400',
   },
   {
     slug: 'zk-toys',
