@@ -12,46 +12,6 @@ export interface Experiment {
 
 export const experiments: Experiment[] = [
   {
-    slug: 'zktls-weather',
-    title: 'zkTLS Weather',
-    description: 'Prove weather conditions privately using zero-knowledge proofs of TLS connections.',
-    longDescription: (
-      <div>
-        <p className="mb-4">
-          The zkTLS Weather demo showcases how zero-knowledge proofs can be used to verify real-world data 
-          without revealing the underlying information. This project demonstrates proving that the weather 
-          temperature is above a specific threshold without exposing the exact temperature or location.
-        </p>
-        <p className="mb-4">
-          Using zkTLS (zero-knowledge Transport Layer Security), we can create cryptographic proofs about 
-          data fetched from weather APIs while maintaining privacy. This opens up possibilities for 
-          conditional payments, insurance claims, and other applications that depend on verifiable real-world data.
-        </p>
-        <p>
-          <strong>Key Features:</strong>
-        </p>
-        <ul className="list-disc pl-6 mt-2">
-          <li>Generate zero-knowledge proofs of weather conditions</li>
-          <li>Verify proofs without revealing exact temperature or location</li>
-          <li>Demonstrate practical applications of zkTLS technology</li>
-          <li>Privacy-preserving verification of external data sources</li>
-        </ul>
-        <p className="mt-4">
-          <a 
-            href="https://github.com/nullifier-labs/zktls-weather" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-blue-400 hover:text-blue-300 underline"
-          >
-            View the project on GitHub →
-          </a>
-        </p>
-      </div>
-    ),
-    icon: CloudSun,
-    color: 'text-cyan-400',
-  },
-  {
     slug: 'zkvm-from-scratch',
     title: 'zkVM from Scratch',
     description: 'Build a zero-knowledge virtual machine from the ground up, understanding every component.',
@@ -96,6 +56,46 @@ export const experiments: Experiment[] = [
     ),
     icon: Cog,
     color: 'text-indigo-400',
+  },
+  {
+    slug: 'zktls-weather',
+    title: 'zkTLS Weather',
+    description: 'Prove weather conditions privately using zero-knowledge proofs of TLS connections.',
+    longDescription: (
+      <div>
+        <p className="mb-4">
+          The zkTLS Weather demo showcases how zero-knowledge proofs can be used to verify real-world data 
+          without revealing the underlying information. This project demonstrates proving that the weather 
+          temperature is above a specific threshold without exposing the exact temperature or location.
+        </p>
+        <p className="mb-4">
+          Using zkTLS (zero-knowledge Transport Layer Security), we can create cryptographic proofs about 
+          data fetched from weather APIs while maintaining privacy. This opens up possibilities for 
+          conditional payments, insurance claims, and other applications that depend on verifiable real-world data.
+        </p>
+        <p>
+          <strong>Key Features:</strong>
+        </p>
+        <ul className="list-disc pl-6 mt-2">
+          <li>Generate zero-knowledge proofs of weather conditions</li>
+          <li>Verify proofs without revealing exact temperature or location</li>
+          <li>Demonstrate practical applications of zkTLS technology</li>
+          <li>Privacy-preserving verification of external data sources</li>
+        </ul>
+        <p className="mt-4">
+          <a 
+            href="https://github.com/nullifier-labs/zktls-weather" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 underline"
+          >
+            View the project on GitHub →
+          </a>
+        </p>
+      </div>
+    ),
+    icon: CloudSun,
+    color: 'text-cyan-400',
   },
   {
     slug: 'zk-toys',
