@@ -63,12 +63,12 @@ export const experiments: Experiment[] = [
           verifiable computation and zero-knowledge execution environments.
         </p>
         <p className="mb-4">
-          Starting with basic arithmetic circuits and building up to a complete instruction set, you'll learn how zkVMs 
+          Starting with basic arithmetic circuits and building up to a complete instruction set, you&apos;ll learn how zkVMs 
           enable private and verifiable computation. We cover constraint systems, witness generation, proving systems, 
           and the architecture decisions that make zkVMs practical for real-world applications.
         </p>
         <p>
-          <strong>What you'll learn:</strong>
+          <strong>What you&apos;ll learn:</strong>
         </p>
         <ul className="list-disc pl-6 mt-2">
           <li>Fundamentals of arithmetic circuits and constraint systems</li>
